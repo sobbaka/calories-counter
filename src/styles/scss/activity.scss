@@ -1,0 +1,33 @@
+.activity {
+  padding: 30px 0;
+  display: block;
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  &__input {
+    margin-top: 6px;
+    cursor: pointer;
+    accent-color: rgb(11, 158, 97);
+  }
+
+  &__item:not(:last-child) {
+    padding-bottom: 15px;
+  }
+
+  &__label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    cursor: pointer;
+    width: 100%;
+  }
+  &__label-comment {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #5a5858;
+    cursor: pointer;
+  }
+}

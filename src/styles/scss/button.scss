@@ -1,0 +1,41 @@
+.button {
+  display: flex;
+  &__button {
+    width: 50%;
+    display: block;
+    text-align: center;
+    border: 1px solid rgb(11, 158, 97);
+    padding: 10px 0;
+    cursor: pointer;
+  }
+
+  &__button:disabled {
+    border: 1px solid rgb(201, 201, 201);
+    cursor: default;
+  }
+
+  &__submit {
+    background-color: rgb(11, 158, 97);
+    color: #fff;
+    border-radius: 10px 0 0 10px;
+    font-weight: bold;
+  }
+
+  &__submit:disabled {
+    background-color: rgb(201, 201, 201);
+    color: #fff;
+    border-radius: 10px 0 0 10px;
+    font-weight: bold;
+  }
+
+  &__reset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 10px 10px 0;
+  }
+
+  &__reset:disabled {
+    color: rgb(201, 201, 201);
+  }
+}

@@ -1,0 +1,37 @@
+.gender {
+  &__switcher {
+    display: flex;
+    padding: 30px 0;
+  }
+  &__item {
+    list-style: none;
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgb(11, 158, 97);
+  }
+
+  &__item:first-child {
+    border-radius: 10px 0 0 10px;
+  }
+  &__item:last-child {
+    border-radius: 0 10px 10px 0;
+  }
+  &__item:has(.gender__input:checked) {
+    background-color: rgb(11, 158, 97);
+    color: #fff;
+  }
+  &__label {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  &__input {
+    visibility: hidden;
+    position: absolute;
+    z-index: -100;
+  }
+}
