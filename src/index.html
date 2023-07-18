@@ -12,93 +12,100 @@
 
 <body>
   <div class="container">
-    <h1 class="title">Счётчик калорий</h1>
+
     <form action="" class="form">
-      <fieldset class="form__fieldset fieldset fieldset__gender">
-        <ul class="switcher switcher__gender">
-          <li class="switcher__item">
-            <label for="gender-male" class="label label__gender">Мужской</label>
-            <input type="radio" name="gender" id="gender-male" class="input input__gender" value="MALE" checked
+      <h1 class="title">Счётчик калорий</h1>
+      <fieldset class="form__fieldset fieldset gender">
+        <ul class="gender__switcher">
+          <li class="gender__item">
+            <label for="gender-male" class="label gender__label">Мужской</label>
+            <input type="radio" name="gender" id="gender-male" class="input gender__input" value="MALE" checked
               required>
           </li>
-          <li class="switcher__item">
-            <label for="gender-female" class="label label__gender">Женский</label>
-            <input type="radio" name="gender" id="gender-female" class="input input__gender" value="FEMALE" required>
+          <li class="gender__item">
+            <label for="gender-female" class="label gender__label">Женский</label>
+            <input type="radio" name="gender" id="gender-female" class="input gender__input" value="FEMALE" required>
           </li>
         </ul>
       </fieldset>
       <fieldset class="form__fieldset fieldset parameters" name="parameters">
         <div class="parameters__item">
-          <label for="parameters__age" class="form__heading">Возраст <span class="parameters__unit">лет</span></label>
+          <label for="parameters__age" class="parameters__heading">Возраст <span
+              class="parameters__unit">лет</span></label>
           <input type="number" name="age" id="parameters__age" placeholder="0" class="parameters__input" required>
         </div>
         <div class="parameters__item">
-          <label for="parameters__height" class="form__heading">Рост <span class="parameters__unit">см</span></label>
+          <label for="parameters__height" class="parameters__heading">Рост <span
+              class="parameters__unit">см</span></label>
           <input type="number" name="height" id="parameters__height" placeholder="0" class="parameters__input" required>
         </div>
         <div class="parameters__item">
-          <label for="parameters__weight" class="form__heading">Вес <span class="parameters__unit">кг</span></label>
+          <label for="parameters__weight" class="parameters__heading">Вес <span
+              class="parameters__unit">кг</span></label>
           <input type="number" name="weight" id="parameters__weight" placeholder="0" class="parameters__input" required>
         </div>
       </fieldset>
       <fieldaset class="form__fieldset activity">
         <div class="activity__item">
-          <input type="radio" name="activity" id="activity__minimal" class="input input__activity" value="MIN" checked
+          <input type="radio" name="activity" id="activity__minimal" class="input activity__input" value="MIN" checked
             required>
           <label for="activity__minimal" class="form__label activity__label">Минимальная<br><span
               class="activity__label-comment">Сидячая работа и нет физических нагрузок</span></label>
         </div>
         <div class="activity__item">
-          <input type="radio" name="activity" id="activity__low" class="input input__activity" value="LOW" required>
+          <input type="radio" name="activity" id="activity__low" class="input activity__input" value="LOW" required>
           <label for="activity__low" class="form__label activity__label">Низкая<br><span
               class="activity__label-comment">Редкие, нерегулярные тренировки, активность в быту</span></label>
         </div>
         <div class="activity__item">
-          <input type="radio" name="activity" id="activity__medium" class="input input__activity" value="MEDIUM"
+          <input type="radio" name="activity" id="activity__medium" class="input activity__input" value="MEDIUM"
             required>
           <label for="activity__medium" class="form__label activity__label">Средняя<br><span
               class="activity__label-comment">Тренировки 3-5 раз в неделю</span></label>
         </div>
         <div class="activity__item">
-          <input type="radio" name="activity" id="activity__high" class="input input__activity" value="HIGH" required>
+          <input type="radio" name="activity" id="activity__high" class="input activity__input" value="HIGH" required>
           <label for="activity__high" class="form__label activity__label">Высокая<br><span
               class="activity__label-comment">Тренировки 6-7 раз в неделю</span></label>
         </div>
         <div class="activity__item">
-          <input type="radio" name="activity" id="activity__very-high" class="input input__activity" value="MAX"
+          <input type="radio" name="activity" id="activity__very-high" class="input activity__input" value="MAX"
             required>
           <label for="activity__very-high" class="form__label activity__label">Очень высокая<br><span
               class="activity__label-comment">Больше 6 тренировок в неделю и физическая работа</span></label>
         </div>
       </fieldaset>
-      <button type="submit" class="button form__submit" name="submit" disabled>Рассчитать</button>
-      <button type="reset" class="button form__reset" name="reset" disabled><svg width="24" height="24"
-          viewBox="0 0 24 24" fill="#FD3636" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M13.4143 12.0002L18.7072 6.70725C19.0982 6.31625 19.0982 5.68425 18.7072 5.29325C18.3162 4.90225 17.6842 4.90225 17.2933 5.29325L12.0002 10.5862L6.70725 5.29325C6.31625 4.90225 5.68425 4.90225 5.29325 5.29325C4.90225 5.68425 4.90225 6.31625 5.29325 6.70725L10.5862 12.0002L5.29325 17.2933C4.90225 17.6842 4.90225 18.3162 5.29325 18.7072C5.48825 18.9022 5.74425 19.0002 6.00025 19.0002C6.25625 19.0002 6.51225 18.9022 6.70725 18.7072L12.0002 13.4143L17.2933 18.7072C17.4882 18.9022 17.7443 19.0002 18.0002 19.0002C18.2562 19.0002 18.5122 18.9022 18.7072 18.7072C19.0982 18.3162 19.0982 17.6842 18.7072 17.2933L13.4143 12.0002Z">
-          </path>
-        </svg>
-        <span>Очистить поля и расчёт</span>
-      </button>
+      <div class="button">
+        <button type="submit" class="button__button button__submit" name="submit" disabled>Рассчитать</button>
+        <button type="reset" class="button__button button__reset" name="reset" disabled><svg width="24" height="24"
+            viewBox="0 0 24 24" fill="#FD3636" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M13.4143 12.0002L18.7072 6.70725C19.0982 6.31625 19.0982 5.68425 18.7072 5.29325C18.3162 4.90225 17.6842 4.90225 17.2933 5.29325L12.0002 10.5862L6.70725 5.29325C6.31625 4.90225 5.68425 4.90225 5.29325 5.29325C4.90225 5.68425 4.90225 6.31625 5.29325 6.70725L10.5862 12.0002L5.29325 17.2933C4.90225 17.6842 4.90225 18.3162 5.29325 18.7072C5.48825 18.9022 5.74425 19.0002 6.00025 19.0002C6.25625 19.0002 6.51225 18.9022 6.70725 18.7072L12.0002 13.4143L17.2933 18.7072C17.4882 18.9022 17.7443 19.0002 18.0002 19.0002C18.2562 19.0002 18.5122 18.9022 18.7072 18.7072C19.0982 18.3162 19.0982 17.6842 18.7072 17.2933L13.4143 12.0002Z">
+            </path>
+          </svg>
+          <span>Очистить поля и расчёт</span>
+        </button>
+      </div>
     </form>
 
-    <div class="result">
-      <h2 class="title">Ваша норма калорий</h2>
-      <div class="calories">
-        <div class="calories__item">
-          <h3 class="calories__calories"><span id="calories__norm">1000</span> ккал</h3>
-          <p class="calories__comment">поддержание веса</p>
+    <div class="result hidden">
+      <h2 class="result__title">Ваша норма калорий</h2>
+      <div class="result__calories">
+        <div class="result__calories-item">
+          <h3 class="result__calories-number"><span id="calories__norm">1000</span> ккал</h3>
+          <p class="result__calories-comment">поддержание веса</p>
         </div>
-        <div class="calories__item">
-          <h3 class="calories__calories"><span id="calories__minimal">1000</span> ккал</h3>
-          <p class="calories__comment">снижение веса</p>
+        <div class="result__calories-item">
+          <h3 class="result__calories-number"><span id="calories__minimal">1000</span> ккал</h3>
+          <p class="result__calories-comment">снижение веса</p>
         </div>
-        <div class="calories__item">
-          <h3 class="calories__calories"><span id="calories__maximum">1000</span> ккал</h3>
-          <p class="calories__comment">набор веса</p>
+        <div class="result__calories-item">
+          <h3 class="result__calories-number"><span id="calories__maximum">1000</span> ккал</h3>
+          <p class="result__calories-comment">набор веса</p>
         </div>
       </div>
     </div>
+
   </div>
 </body>
 
