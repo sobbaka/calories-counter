@@ -1,4 +1,28 @@
 .result {
   width: 100%;
   max-width: 500px;
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 20px 10px 30px;
+  border-radius: 20px;
+  height: auto;
+
+  &__calories {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+  }
+
+  &__result {
+    font-size: 1.4rem;
+  }
+
+  &__calories-number {
+    font-weight: bold;
+  }
+
+  &__calories-comment {
+    font-size: 1.1rem;
+    color: #5a5858;
+  }
 }
