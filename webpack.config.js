@@ -3,6 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 // const CopyPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
+
 
 
 const mode = process.env.NODE_ENV || 'development';
@@ -54,6 +56,14 @@ module.exports = {
         title: 'Webpack Title test'
       }
     }),
+    // new HtmlWebpackPartialsPlugin([
+    //   {
+    //     path: path.join(__dirname, './comment.html'),
+    //     priority: 'replace',
+    //     location: 'block',
+    //     template_filename: ['index.html']
+    //   }
+    // ]),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css'
     }),
