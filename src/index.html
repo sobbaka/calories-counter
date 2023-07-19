@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -8,11 +8,11 @@
   <meta name="description" content="#">
   <link rel="canonical" href="#" />
   <link rel="shortcut icon" href="#">
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
   <div class="container">
-
     <form action="" class="form">
       <h1 class="title">Счётчик калорий</h1>
       <fieldset class="form__fieldset fieldset gender">
@@ -32,17 +32,20 @@
         <div class="parameters__item">
           <label for="parameters__age" class="parameters__heading">Возраст <span
               class="parameters__unit">лет</span></label>
-          <input type="number" name="age" id="parameters__age" placeholder="0" class="parameters__input" required>
+          <input type="number" name="age" id="parameters__age" placeholder="0" class="parameters__input" required
+            min="0" max="120" step="1">
         </div>
         <div class="parameters__item">
           <label for="parameters__height" class="parameters__heading">Рост <span
               class="parameters__unit">см</span></label>
-          <input type="number" name="height" id="parameters__height" placeholder="0" class="parameters__input" required>
+          <input type="number" name="height" id="parameters__height" placeholder="0" class="parameters__input" required
+            min="0" max="230" step="1">
         </div>
         <div class="parameters__item">
           <label for="parameters__weight" class="parameters__heading">Вес <span
               class="parameters__unit">кг</span></label>
-          <input type="number" name="weight" id="parameters__weight" placeholder="0" class="parameters__input" required>
+          <input type="number" name="weight" id="parameters__weight" placeholder="0" class="parameters__input" required
+            min="0" step="1">
         </div>
       </fieldset>
       <fieldaset class="form__fieldset activity">
@@ -96,11 +99,13 @@
           <p class="result__calories-comment">поддержание веса</p>
         </div>
         <div class="result__calories-item">
-          <h3 class="result__calories-number"><span id="calories__minimal" class="result__result">1000</span> ккал</h3>
+          <h3 class="result__calories-number"><span id="calories__minimal" class="result__result">1000</span> ккал
+          </h3>
           <p class="result__calories-comment">снижение веса</p>
         </div>
         <div class="result__calories-item">
-          <h3 class="result__calories-number"><span id="calories__maximum" class="result__result">1000</span> ккал</h3>
+          <h3 class="result__calories-number"><span id="calories__maximum" class="result__result">1000</span> ккал
+          </h3>
           <p class="result__calories-comment">набор веса</p>
         </div>
       </div>
